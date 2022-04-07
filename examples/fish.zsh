@@ -1,7 +1,7 @@
 ZSH_GIT_PROMPT_SHOW_UPSTREAM="no"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="["
-ZSH_THEME_GIT_PROMPT_SUFFIX="] "
+ZSH_THEME_GIT_PROMPT_PREFIX="("
+ZSH_THEME_GIT_PROMPT_SUFFIX=") "
 ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
 ZSH_THEME_GIT_PROMPT_DETACHED="%{$fg_bold[cyan]%}:"
 ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
@@ -60,5 +60,5 @@ function __zshrc_sdirname {
   echo "$cur_short_path"
 }
 
-PROMPT='%F{green}$(__zshrc_prompt_shortpath) $(gitprompt)%F{reset_color}$ '
+PROMPT='%F{green}$(__zshrc_prompt_shortpath) %F{reset_color}%b$(gitprompt)%F{reset_color}$ '
 RPROMPT=''
